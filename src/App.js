@@ -25,16 +25,35 @@ const App = () => {
       ]
     });
   };
+
+  const HandleNameChange = event => {
+    setAppState({
+      Person: [
+        { name: "Ajay", age: 40 },
+        { name: "Harshada", age: 30 },
+        { name: event.target.value, age: 32 },
+        { name: "Kunal", age: 31 },
+        { name: "Iyer", age: 64 }
+      ]
+    });
+  };
   return (
     <div>
       <h1>Click to change age </h1>
-      <button onClick={handleClick}>Click</button>
+      <button onClick={() => handleClick()}>Click</button>
 
       <Person name={appState.Person[0].name} age={appState.Person[0].age} />
+
       <Person
-        click={handleClick}
+        click={() => handleClick("Akash")}
         name={appState.Person[4].name}
         age={appState.Person[4].age}
+      />
+
+      <Person
+        change={HandleNameChange}
+        name={appState.Person[2].name}
+        age={appState.Person[2].age}
       />
     </div>
   );
