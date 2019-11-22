@@ -2,3 +2,16 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.bt{
+  box-shadow: 2px 1px 4px rgb(177, 80, 80);
+  background-color: #4CAF50;
+  padding:15px 32px;
+  color: white;
+  text-align: center;
+  font-size:16px;
+  margin: 4px 2px;
+  display: inline-block;
+  cursor: pointer;
+   text-decoration: none;
+}
